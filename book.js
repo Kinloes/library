@@ -11,23 +11,21 @@ function book(title, author, pages, read){
 };
 
 function addBook(){
-    let bookPrompt = prompt("What book are you adding to the library?");
-    let authorPrompt = prompt("Who wrote the book?");
-    let pagesPrompt = prompt("How many pages are in the book?");
-    function readPromptFunc(){readPrompt = prompt("Have you finished it? (Write have finished or have not finished)");
-    if (readPrompt == "have finished" || readPrompt == "have not finished") {
-        console.log("CORRECT")
-    }
-    else{
-        alert('please enter "have finished" or "have not finished"')
-        readPromptFunc()
-    }
+    //let bookPrompt = prompt("What book are you adding to the library?");
+    //let authorPrompt = prompt("Who wrote the book?");
+    //let pagesPrompt = prompt("How many pages are in the book?");
+    //function readPromptFunc(){readPrompt = prompt("Have you finished it? (Write have finished or have not finished)");
+    //if (readPrompt == "have finished" || readPrompt == "have not finished") {
+    //    console.log("CORRECT")
+    //}
     const libraryAddition = document.createElement("div");
-    libraryAddition.innerText = "IT WORKED!!!";
+    for (let i = 0; i = i; i++){
+    }
+    //libraryAddition.innerText = titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value;
+    myLibrary[i].push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value)
+    libraryAddition.innerText = myLibrary
     document.body.appendChild(libraryAddition);
-}
-    readPromptFunc()
-    console.log(bookPrompt,"was written by", authorPrompt, "it's", pagesPrompt, "pages long and I", readPrompt, "it.")
+    console.log(myLibrary)
 }
 
 const hobbit = new book("The Hobbit", "by J.R.R Tolkien", "295 pages", "have read");

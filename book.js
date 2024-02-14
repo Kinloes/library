@@ -19,11 +19,10 @@ function addBook(){
     //    console.log("CORRECT")
     //}
     const libraryAddition = document.createElement("div");
-    for (let i = 0; i = i; i++){
-    }
     //libraryAddition.innerText = titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value;
-    myLibrary[i].push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value)
-    libraryAddition.innerText = myLibrary
+    let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value)
+    libraryAddition.innerText = myLibrary[myLibrary.length - 1]
+    //Figuirng out the loop here is critical to ensure the string continues to add to the library without also grabbing what's already been added again.
     document.body.appendChild(libraryAddition);
     console.log(myLibrary)
 }

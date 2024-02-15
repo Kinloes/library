@@ -18,8 +18,8 @@ function addBook(){
     console.log(myLibrary)
 }
 
-const hobbit = new book("The Hobbit", "by J.R.R Tolkien", "295 pages", "have read");
+/*const hobbit = new book("The Hobbit", "by J.R.R Tolkien", "295 pages", "have read");
 const notHobbit = new book("Shane", "by Jack Schaefer", "88 pages", "have read")
 hobbit.fullBook();
 notHobbit.fullBook();
-Object.getPrototypeOf(book) === hobbit.prototype
+Object.getPrototypeOf(book) === hobbit.prototype*/

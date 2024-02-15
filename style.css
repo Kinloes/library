@@ -1,2 +1,5 @@
-p {
-    color: blue;}
+#headerContainer{
+    justify-content: center;
+    display: grid;
+    grid-gap: 1vh;
+}

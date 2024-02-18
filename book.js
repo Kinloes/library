@@ -1,5 +1,5 @@
-const myLibrary = []
-
+const myLibrary = [];
+let test;
 function book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -10,9 +10,16 @@ function book(title, author, pages, read){
     };
 };
 
+let skaa = readPromptFunc()
+function readPromptFunc(){
+    if (test === undefined){
+    return "ello guvna"
+    }
+}
+
 function addBook(){
     const libraryAddition = document.createElement("div");
-    let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value)
+    let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value + " " + skaa) 
     libraryAddition.innerText = myLibrary[myLibrary.length - 1]
     document.body.appendChild(libraryAddition);
     console.log(myLibrary)

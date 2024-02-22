@@ -1,5 +1,4 @@
 const myLibrary = [];
-let test;
 function book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -10,16 +9,20 @@ function book(title, author, pages, read){
     };
 };
 
-let skaa = readPromptFunc()
-function readPromptFunc(){
-    if (test === undefined){
-    return "ello guvna"
+function theClickFunction(){
+    console.log("Button pressed")
+    let readPrompt = document.getElementById("readPrompt");
+    if (readPrompt.checked == true){
+        return(document.getElementById("readPrompt"))
+    }
+    else{
+        return("I have not read it")
     }
 }
 
 function addBook(){
     const libraryAddition = document.createElement("div");
-    let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value + " " + skaa) 
+    let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value + " " + theClickFunction()) 
     libraryAddition.innerText = myLibrary[myLibrary.length - 1]
     document.body.appendChild(libraryAddition);
     console.log(myLibrary)

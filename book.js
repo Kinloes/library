@@ -8,24 +8,26 @@ function book(title, author, pages, read){
         console.log(this.title, this.author,"is", this.pages,"long and I", this.read, "it.")
     };
 };
-
 function theClickFunction(){
-    console.log("Button pressed")
     let readPrompt = document.getElementById("readPrompt");
     if (readPrompt.checked == true){
-        return(document.getElementById("readPrompt"))
+        return("I have read it");
     }
     else{
-        return("I have not read it")
+        return("I have not read it");
     }
 }
 
 function addBook(){
     const libraryAddition = document.createElement("div");
+    libraryAddition.id = ("bookNum [i]")
     let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value + " " + theClickFunction()) 
-    libraryAddition.innerText = myLibrary[myLibrary.length - 1]
+    libraryAddition.innerText = myLibrary[myLibrary.length - 1];
     document.body.appendChild(libraryAddition);
-    console.log(myLibrary)
+    const delButton = document.createElement("button");
+    delButton.textContent = "Delete entry";
+    document.body.appendChild(delButton);
+    console.log(myLibrary);
 }
 
 /*const hobbit = new book("The Hobbit", "by J.R.R Tolkien", "295 pages", "have read");

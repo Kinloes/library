@@ -1,4 +1,5 @@
 const myLibrary = [];
+let i = 1;
 function book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -20,7 +21,7 @@ function theClickFunction(){
 
 function addBook(){
     const libraryAddition = document.createElement("div");
-    libraryAddition.id = ("bookNum [i]")
+    libraryAddition.id = `bookNum ${i}`;
     let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value + " " + theClickFunction()) 
     libraryAddition.innerText = myLibrary[myLibrary.length - 1];
     document.body.appendChild(libraryAddition);
@@ -28,6 +29,7 @@ function addBook(){
     delButton.textContent = "Delete entry";
     document.body.appendChild(delButton);
     console.log(myLibrary);
+    i++
 }
 
 /*const hobbit = new book("The Hobbit", "by J.R.R Tolkien", "295 pages", "have read");

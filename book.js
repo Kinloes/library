@@ -1,5 +1,5 @@
 const myLibrary = [];
-let i = 1;
+let i = 0;
 function book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -21,17 +21,25 @@ function theClickFunction(){
 
 function addBook(){
     const libraryAddition = document.createElement("div");
-    libraryAddition.id = `bookNum ${i}`;
+    libraryAddition.id = `bookNum${i}`;
     let arrayAdd = myLibrary.push(titlePrompt.value + " " + authorPrompt.value + " " + pagesPrompt.value + " " + theClickFunction()) 
     libraryAddition.innerText = myLibrary[myLibrary.length - 1];
     document.body.appendChild(libraryAddition);
     const delButton = document.createElement("button");
+    delButton.id = `delBut${i}`
+    delButton.addEventListener("click", byeBook);
     delButton.textContent = "Delete entry";
     document.body.appendChild(delButton);
     console.log(myLibrary);
     i++
 }
 
+byeBook = function delEntry(){
+    const entryElement = document.getElementById(this.id).previousSibling;
+    const delElement = document.getElementById(this.id);
+    entryElement.remove();
+    delElement.remove();
+}
 /*const hobbit = new book("The Hobbit", "by J.R.R Tolkien", "295 pages", "have read");
 const notHobbit = new book("Shane", "by Jack Schaefer", "88 pages", "have read")
 hobbit.fullBook();
